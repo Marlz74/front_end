@@ -149,7 +149,7 @@ p span#mail{
     }
     .wrapper{
         background: var(--White);
-        padding: 0;
+        padding: 2rem 2px;
     }
     .img img{
         width: 100%;
