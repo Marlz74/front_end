@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRO SECTION</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="">
+    <div class="overlay_"></div>
+    <section id="nav">
+        <nav class="flex-between">
+            <div class="left-side flex-center">
+                <img class="logo" src="./img/logo.svg" alt="">
+                <div class="links flex-center link-effect hide">
+                    <div class="features drop-down">
+                        <p>Features <img class="down" src="./img/icon-arrow-down.svg" alt=""> <img class="up"
+                                src="./img/icon-arrow-up.svg" alt=""></p>
+                        <div class="feature-container drop-down-effect drop-down-items">
+                            <a class="feature" href="">
+                                <img src="./img/icon-todo.svg" alt="">
+                                <span>Todo List</span>
+                            </a>
+                            <a class="feature" href="">
+                                <img src="./img/icon-calendar.svg" alt="">
+                                <span>Calendar</span>
+                            </a>
+                            <a class="feature" href="">
+                                <img src="./img/icon-reminders.svg" alt="">
+                                <span>Reminders</span>
+                            </a>
+                            <a class="feature" href="">
+                                <img src="./img/icon-planning.svg" alt="">
+                                <span>Planning</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="company drop-down">
+                        <p>Company <img class="down" src="./img/icon-arrow-down.svg" alt=""> <img class="up"
+                                src="./img/icon-arrow-up.svg" alt=""></p>
+                        <div class="drop-down-items drop-down-effect">
+                            <a href="">History</a>
+                            <a href="">Our Team</a>
+                            <a href="">Blog</a>
+                        </div>
+                    </div>
+                    <a href="">Careers</a>
+                    <a href="">About</a>
+                </div>
+            </div>
+            <div class="right-side hide">
+                <a href="">Login</a>
+                <a href="">Register</a>
+            </div>
+            <div class="menu-container">
+                <img class="menu " src="./img/icon-menu.svg" alt="">
+                <img class="close hide" src="./img/icon-close-menu.svg" alt="">
+            </div>
+
+        </nav>
+
+    </section>
+
+    <section id="hero">
+        <div class="hero-container flex-center">
+            <div class="text-container">
+
+                <h1 class="">Make <br> remote work</h1>
+                <h1 class="mobile-h1">Make remote work</h1>
+                
+                <p>Get your team in sync, no matter your location.
+                    Streamline processes, create team rituals, and watch productivity soar.</p>
+                <button>Learn more</button>
+                <div class="sponsors">
+                    <img src="./img/client-databiz.svg" alt="">
+                    <img src="./img/client-audiophile.svg" alt="">
+                    <img src="./img/client-meet.svg" alt="">
+                    <img src="./img/client-maker.svg" alt="">
+                </div>
+            </div>
+            <div class="img-container">
+                <img class="desktop" src="./img/image-hero-desktop.png" alt="">
+                <img class="mobile" src="./img/image-hero-mobile.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const [view, close_] = document.querySelectorAll('.menu-container img'),
+            overlay = document.querySelector('.overlay_'),
+            mobileLinks = document.querySelector('.links'),
+            rightSide = document.querySelector('.right-side');
+
+
+        view.onclick = () => {
+            overlay.classList.add('overlay');
+            mobileLinks.classList.remove('hide')
+            view.classList.add('hide');
+            close_.classList.remove('hide');
+            rightSide.classList.remove('hide');
+            mobileLinks.classList.add('remove-effect')
+        }
+        close_.onclick = () => {
+            overlay.classList.remove('overlay');
+            mobileLinks.classList.add('hide')
+            view.classList.remove('hide');
+            rightSide.classList.add('hide');
+            close_.classList.add('hide')
+            mobileLinks.classList.remove('remove-effect')
+        }
+    </script>
+</body>
+
+</html>

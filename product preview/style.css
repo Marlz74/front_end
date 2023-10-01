@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --verydarkblue: hsl(212, 21%, 14%);
+    --darkgrayishblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url(./font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url(./font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: 'fraunces';
+    src: url(./font/Fraunces_72pt-Bold.ttf);
+}
+body{
+    background: var(--cream);
+    font-family: 'montserrat';
+}
+.wrappper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile{
+    display: none;
+}
+.desktop{
+    width: 50%;
+    border-top-left-radius:inherit ;
+    border-bottom-left-radius: inherit;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    width: 34rem;
+    border-radius: .6rem;
+}
+.detail-container{
+    background: var(--white);
+    padding: 2rem;
+    border-top-right-radius:inherit ;
+    border-bottom-right-radius: inherit;
+}
+.detail-container h4{
+    color: var(--darkgrayishblue);
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+.detail-container h2{
+    max-width: 90%;
+    margin: 1.5rem 0;
+    font-size: 1.7rem;
+    font-family: 'fraunces';
+}
+.detail-container p{
+    color: var(--darkgrayishblue);
+    font-weight: 500;
+    font-size: 15px;
+}
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.price-container h1{
+    color: var(--darkcyan);
+}
+.price-container small{
+    color: var(--darkgrayishblue);
+}
+button{
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    outline: none;
+    border: none;
+    background: var(--darkcyan);
+    color: var(--white);
+    padding: 14px 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background .5s ease;
+}
+button:hover{
+    background: #143d14;
+}
+
+@media screen and (max-width:760px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        width: 100%;
+    }
+    .box{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .detail-container h2 {
+        margin: .7rem 0;
+    }
+    button{
+        margin-top: .2rem;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE CALCULATOR</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section id="wrapper">
+        <div class="wrapper">
+            <div class="input-container">
+                <div class="input-detail">
+                    <label for="day">DAY</label>
+                    <input type="number" min="0" placeholder="DD" name="day">
+                    <p class="err hide">This field is required</p>
+                </div>
+                <div class="input-detail">
+                    <label for="month">MONTH</label>
+                    <input type="number" min="0" placeholder="MM" name="month">
+                    <p class="err hide">This field is required</p>
+                </div>
+                <div class="input-detail">
+                    <label for="year" >YEAR</label>
+                    <input type="number" min="0"   placeholder="YYYY" name="year">
+                    <p class="err hide">This field is required</p>
+                </div>
+            </div>
+            <div class="lineC">
+                <div class="circle">
+                    <img src="./img/icon-arrow.svg" alt="">
+                </div>
+            </div>
+            <div class="result-wrapper">
+                <div class="years result">
+                    <h1 class="flex">
+                        <span class="placeholder"></span> <span class="placeholder"></span>
+                    </h1>
+                    <h1>years</h1>
+                </div>
+                <div class="months result">
+                    <h1 class="flex">
+                        <span class="placeholder"></span> <span class="placeholder"></span>
+                    </h1>
+                    <h1>months</h1>
+                </div>
+                <div class="days result">
+                    <h1 class="flex">
+                        <span class="placeholder"></span> <span class="placeholder"></span>
+                    </h1>
+                    <h1>days</h1>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </section>
+    
+</body>
+</html>
